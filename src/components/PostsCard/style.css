@@ -1,0 +1,30 @@
+.card-wrapper{
+    width: 70%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    column-gap: 5%;
+    align-self: center;
+    border-radius: 20px;
+    background: rgba(63,52,52,0.32);
+    padding: 2%;
+    cursor: pointer;
+    box-shadow: 8px 9px 10px -5px rgba(0,0,0,0.75);
+}
+
+.card-title{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.card-body{
+    font-size: 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: normal;
+    padding-right: 5%;
+}

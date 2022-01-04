@@ -1,0 +1,18 @@
+.post-wrapper{
+    margin-left: 3%;
+    margin-top: 3%;
+    width: 80%;
+}
+
+.post-title{
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: 0.2px;
+    font-variant-caps: petite-caps;
+    margin-bottom: 2%;
+}
+
+.post-body{
+    color: slategrey;
+    font-size: 20px;
+}

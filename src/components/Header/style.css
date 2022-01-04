@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--header);
+    height: 10%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header>h2{
+    font-size: 32px;
+    line-height: 19px;
+    color: var(--text-title);
+    letter-spacing: 2px;
+    margin-left: 50%;
+    transform: translateX(-100%);
+}

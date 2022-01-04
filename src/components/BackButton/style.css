@@ -1,0 +1,8 @@
+.back-arrow{
+    font-size: 32px;
+    align-self: center;
+    justify-self: left;   
+    padding: 1%;
+    margin-left: 1%;
+    cursor: pointer;
+}

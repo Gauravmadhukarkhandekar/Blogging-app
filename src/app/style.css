@@ -1,0 +1,21 @@
+:root{
+    --primary-color: #0099ff;
+    --button: #0099ff;
+    --border: #d8d8d8;
+    --header: #f4f4f4;
+    --text-title: #3c3c3c;
+}
+
+.app-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow-y: scroll;
+}
+
+.app-wrapper::-webkit-scrollbar {
+    display: none;
+}

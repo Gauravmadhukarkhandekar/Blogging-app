@@ -1,0 +1,37 @@
+.user-table{
+    border-bottom : 1px solid lightgrey;
+    width: 70%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    margin-top: 3%;
+    column-gap: 1%;
+    color: grey;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+.table-header-row{
+    font-size: 32px;
+    margin-bottom: 3%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+    
+}
+
+.table-data-row{
+    margin-bottom: 3%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: normal;
+    
+}
+
+.table-item-button{
+    cursor: pointer;
+    
+}
