@@ -8,6 +8,7 @@ import APP_CONTEXT from '../../store/context';
 
 function HomePage(props) {
 
+    const [showLoader , setShowLoader] = useState(true);
     const appContext = useContext(APP_CONTEXT);
     const navigate = useNavigate();
     console.log({appContext});
@@ -28,9 +29,11 @@ function HomePage(props) {
                     user: appContext.user,
                     posts: appContext.posts
                 })
+                setShowLoader(false)
             })
             .catch(e => console.warn(e))}
     },[])
+    if(showLoader) return <Loading />
     return (
         <div className='app-wrapper'>
             <Header showBack={false} title= "BLOGGERS"></Header>

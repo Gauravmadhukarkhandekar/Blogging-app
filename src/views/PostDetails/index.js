@@ -7,6 +7,7 @@ import Post from '../../components/Post';
 
 function PostDetails(props) {
 
+    const [showLoader , setShowLoader] = useState(true);
     const [post , setPost] = useState({});
     const [comments, setComments] = useState([]);
     const [showComments , setShowComments] = useState(false)
@@ -20,6 +21,7 @@ function PostDetails(props) {
         GET_POST(params?.postId)
         .then(resp => {
             setPost(resp?.data)
+            setShowLoader(false)
         })
 
         GET_COMMENTS(params?.userId)
@@ -29,7 +31,7 @@ function PostDetails(props) {
 
 
     },[])
-
+    if(showLoader) return <Loading />
     return (
         <div className='app-wrapper'>
             <Header title="BLOGGERS"></Header>

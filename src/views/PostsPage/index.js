@@ -7,6 +7,7 @@ import APP_CONTEXT from '../../store/context';
 
 function PostsPage(props) {
 
+    const [showLoader , setShowLoader] = useState(true);
     const location = useMatch('/users/:userId/posts')
     const navigate = useNavigate();
     //console.log(location)
@@ -30,10 +31,12 @@ function PostsPage(props) {
                 post: appContext.post,
                 user: appContext.user
             })
+            setShowLoader(false)
         })
         .catch(e => console.warn(e))
     },[])
 
+    if(showLoader) return <Loading />
     return (
         <div className='app-wrapper'>
             {console.log(appContext.posts)}
