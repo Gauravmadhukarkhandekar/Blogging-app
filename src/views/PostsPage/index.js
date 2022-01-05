@@ -1,9 +1,10 @@
-import React, { useEffect, useContext } from 'react';
-import {  useMatch , useNavigate  } from 'react-router-dom';
+import React, { useEffect, useContext, useState } from 'react';
+import {  useMatch , useNavigate   } from 'react-router-dom';
 import { GET_POSTS } from '../../api';
 import Header from '../../components/Header';
 import Card from '../../components/PostsCard';
 import APP_CONTEXT from '../../store/context';
+import Loading from '../../components/Loading';
 
 function PostsPage(props) {
 

@@ -4,6 +4,7 @@ import { GET_COMMENTS, GET_POST } from '../../api';
 import Comment from '../../components/Comments';
 import Header from '../../components/Header';
 import Post from '../../components/Post';
+import Loading from '../../components/Loading';
 
 function PostDetails(props) {
 

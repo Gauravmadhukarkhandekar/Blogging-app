@@ -1,10 +1,11 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import {GET_USERS} from "../../api/index"
 import Header from '../../components/Header';
 import Table from '../../components/Table';
 import APP_CONTEXT from '../../store/context';
+import Loading from '../../components/Loading';
 
 function HomePage(props) {
 
