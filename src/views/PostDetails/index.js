@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { GET_COMMENTS, GET_POST } from '../../api';
+import { useParams , useNavigate} from 'react-router-dom';
+import { GET_COMMENTS, GET_POST  , DELETE_POST} from '../../api';
 import Comment from '../../components/Comments';
 import Header from '../../components/Header';
 import Post from '../../components/Post';
 import Loading from '../../components/Loading';
+
 
 function PostDetails(props) {
 
@@ -13,6 +14,17 @@ function PostDetails(props) {
     const [comments, setComments] = useState([]);
     const [showComments , setShowComments] = useState(false)
     const params = useParams();
+    const navigate = useNavigate();
+
+    const onDeleteClicked = () => {
+        DELETE_POST(params?.postId)
+        .then((resp) => {
+            console.log(resp)
+            alert("Post deleted successfully!")
+            navigate(-1);
+        })
+        .catch(err => console.warn(err))
+    }
     
     const onCommentsClick = () =>{
         setShowComments(!showComments)
@@ -37,6 +49,18 @@ function PostDetails(props) {
         <div className='app-wrapper'>
             <Header title="BLOGGERS"></Header>
             <Post post = {post} />
+            <button 
+            onClick = {onDeleteClicked}
+            style={{
+                padding: "1%",
+                width: "8%",
+                margin: "2% 0% 0% 3%",
+                borderRadius : "10px",
+                backgroundColor: "#df4759",
+                color: "white",
+                cursor: "pointer"
+                
+            }}>Delete Post</button>
             <div
             onClick={onCommentsClick}
             style={{

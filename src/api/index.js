@@ -19,9 +19,14 @@ const GET_COMMENTS = (userId)=>{
     return axios.get(`https://${host}/comments?postId=${userId}`)
 }
 
+const DELETE_POST = (postId) => {
+    return axios.delete(`https://${host}/posts/${postId}`)
+}
+
 export{
     GET_USERS,
     GET_POSTS,
     GET_POST,
-    GET_COMMENTS
+    GET_COMMENTS,
+    DELETE_POST
 }
